@@ -4,8 +4,11 @@ import math
 
 pygame.init()
 
+#frames per second
 fps = 60
 
+
+#Game-structure, and initial values
 width, height = 800, 800
 rows = 4
 cols = 4 
@@ -26,10 +29,31 @@ move_vel = 20
 
 window = pygame.display.set_mode ((width, height))
 pygame.display.set_caption("2048")
- 
+
+
+
+
+#Game developement
+def draw(window):
+    window.fill(backgroundcol)
+
+    pygame.display.update()
+
 
 def main (window):
-    pass
+    clock = pygame.time.Clock()
+    run = True
+
+    while run:
+        clock.tick (fps)
+
+        for event in pygame.event.get():
+            if event.type ==pygame.QUIT:
+                run = False
+                break
+
+        draw(window)
+    pygame.quit()
 
 if __name__=="__main__":
     main(window)
