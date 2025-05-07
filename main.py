@@ -8,6 +8,7 @@ pygame.init()
 fps = 60
 
 
+
 #Game-structure, and initial values
 width, height = 800, 800
 rows = 4
@@ -21,22 +22,21 @@ outlinethick = 10
 backgroundcol = (205, 192, 180)
 fontcol = (119, 110, 101)
 
-window = pygame.display.set_mode((width, height))
+WINDOW = pygame.display.set_mode((width, height))
 pygame.display.set_caption("2048")
 
 font = pygame.font.SysFont("impact", 60, bold= True)
 move_vel = 20
 
-window = pygame.display.set_mode ((width, height))
-pygame.display.set_caption("2048")
-
-
-
 
 #Game developement
+def draw_grid (window):
+    pygame.draw.rect(window, outlinecol, (0, 0, width, height), outlinethick)
+
 def draw(window):
     window.fill(backgroundcol)
 
+    draw_grid(window)
     pygame.display.update()
 
 
