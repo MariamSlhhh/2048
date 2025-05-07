@@ -1,3 +1,25 @@
-print ("hello world")
+import pygame
+import random
+import math
 
-print ("hi there")
+pygame.init()
+
+fps = 60
+
+width, height = 800, 800
+rows = 4
+cols = 4 
+
+rect_height= height // rows
+rect_width= width = width // cols
+
+outlinecol = (187, 173, 160)
+outlinethick = 10
+backgroundcol = (205, 192, 180)
+fontcol = (119, 110, 101)
+
+window = pygame.display.set_mode(width, height)
+pygame.display.set_caption("2048")
+
+font = pygame.font.SysFont("impact", 60, bold= True)
+move_vel = 20
