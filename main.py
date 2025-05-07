@@ -18,8 +18,18 @@ outlinethick = 10
 backgroundcol = (205, 192, 180)
 fontcol = (119, 110, 101)
 
-window = pygame.display.set_mode(width, height)
+window = pygame.display.set_mode((width, height))
 pygame.display.set_caption("2048")
 
 font = pygame.font.SysFont("impact", 60, bold= True)
 move_vel = 20
+
+window = pygame.display.set_mode ((width, height))
+pygame.display.set_caption("2048")
+ 
+
+def main (window):
+    pass
+
+if __name__=="__main__":
+    main(window)
